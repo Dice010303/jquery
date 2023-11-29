@@ -31,34 +31,34 @@ ajax 문법
 */
 
 $(document).ready(function () {
-    $("#listButton").click(getMemberList);
+  $("#listButton").click(getMemberList);
 });
 
 function getMemberList() {
-    $.ajax({
-        type: "get",
-        url: "data.json",
-        dataType: "json",
-        success: function (data) {
-            console.log(data);
-            let array = new Array();
-            data.memberList.forEach(function (member) {
-                array.push(
-                    "<li>이름 : " +
-                    member.name +
-                    ", 나이 : " +
-                    member.age +
-                    ", 생일 : " +
-                    member.birth +
-                    ", 연락처 : " +
-                    member.tel +
-                    "</li>"
-                );
-            });
-            $("#result").html(array.join(""));
-        },
-        error: function () {
-            alert("ajax 실패");
-        },
-    });
+  $.ajax({
+    type: "get",
+    url: "data.json",
+    dataType: "json",
+    success: function (data) {
+      console.log(data);
+      let array = new Array();
+      data.memberList.forEach(function (member) {
+        array.push(
+          "<li>이름 : " +
+            member.name +
+            ", 나이 : " +
+            member.age +
+            ", 생일 : " +
+            member.birth +
+            ", 연락처 : " +
+            member.tel +
+            "</li>"
+        );
+      });
+      $("#result").html(array.join(""));
+    },
+    error: function () {
+      alert("ajax 실패");
+    },
+  });
 }

@@ -23,50 +23,50 @@ find('~ 선택자') : 선택된 문서객체의 뒤에 있는 모든 동위요�
 */
 
 $(document).ready(function () {
-    //부모,조상 요소 재선택
-    //parents
-    $(".prt").parents().css({
-        padding: 20,
-        border: "3px solid black",
-    });
+  //부모,조상 요소 재선택
+  //parents
+  $(".prt").parents().css({
+    padding: 20,
+    border: "3px solid black",
+  });
 
-    $(".prt").parents("div").css("border-color", "red");
+  $(".prt").parents("div").css("border-color", "red");
 
-    //parent
-    $(".prt").parent().css("border-color", "blue");
+  //parent
+  $(".prt").parent().css("border-color", "blue");
 
-    //parentsUntil
-    $(".prt").parentsUntil("body").css("border-style", "dashed");
+  //parentsUntil
+  $(".prt").parentsUntil("body").css("border-style", "dashed");
 
-    //자손,후손 요소 재선택
-    //children
-    $(".chd").children().css("color", "red");
+  //자손,후손 요소 재선택
+  //children
+  $(".chd").children().css("color", "red");
 
-    $(".chd").children("p").css("text-decoration", "underline");
+  $(".chd").children("p").css("text-decoration", "underline");
 
-    //find
-    $(".fnd").click(function () {
-        //> 넣어주면 자손만 선택
-        $(this).find("> h3").css("background", "pink");
-        $(this).find("li").css("background", "lightblue");
-    });
+  //find
+  $(".fnd").click(function () {
+    //> 넣어주면 자손만 선택
+    $(this).find("> h3").css("background", "pink");
+    $(this).find("li").css("background", "lightblue");
+  });
 
-    //형제 요소 재선택
-    //siblings
-    $(".bro").siblings().css("font-size", 15);
-    $(".bro").siblings("h6").css("font-style", "italic");
+  //형제 요소 재선택
+  //siblings
+  $(".bro").siblings().css("font-size", 15);
+  $(".bro").siblings("h6").css("font-style", "italic");
 
-    //next, prev
-    $(".bro").next().css("text-decoration", "underline");
-    $(".bro").prev().css("text-decoration", "underline");
+  //next, prev
+  $(".bro").next().css("text-decoration", "underline");
+  $(".bro").prev().css("text-decoration", "underline");
 
-    $(".bro").nextAll().css("color", "red");
-    $(".bro").prevAll().css("color", "blue");
+  $(".bro").nextAll().css("color", "red");
+  $(".bro").prevAll().css("color", "blue");
 
-    $(".bro").nextUntil("h6").css("background", "yellow");
-    $(".bro").prevUntil("h1").css("background", "orange");
+  $(".bro").nextUntil("h6").css("background", "yellow");
+  $(".bro").prevUntil("h1").css("background", "orange");
 
-    //find
-    $(".bro").find("+ h4").html("제목태그@@@");
-    $(".bro").find("~ h6").html("제목태그@@@");
+  //find
+  $(".bro").find("+ h4").html("제목태그@@@");
+  $(".bro").find("~ h6").html("제목태그@@@");
 });

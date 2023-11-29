@@ -37,45 +37,45 @@ API
 */
 
 $(document).ready(function () {
-    //JSON.parse()
-    let originData =
-        '{"name": "홍길동", "age": 30, "email": "test@naver.com", "birth": "2020-01-01"}';
-    console.log(typeof originData);
+  //JSON.parse()
+  let originData =
+    '{"name": "홍길동", "age": 30, "email": "test@naver.com", "birth": "2020-01-01"}';
+  console.log(typeof originData);
 
-    let changeData = JSON.parse(originData);
-    console.log(changeData);
+  let changeData = JSON.parse(originData);
+  console.log(changeData);
 
-    //날짜타입은 JSON에서 객체로 변환될 때 허용되지 않는다.
-    let birth = new Date(changeData.birth);
+  //날짜타입은 JSON에서 객체로 변환될 때 허용되지 않는다.
+  let birth = new Date(changeData.birth);
 
-    $(".name").html(changeData.name);
-    $(".age").html(changeData.age);
-    $(".email").html(changeData.email);
-    $(".birth").html(birth);
+  $(".name").html(changeData.name);
+  $(".age").html(changeData.age);
+  $(".email").html(changeData.email);
+  $(".birth").html(birth);
 
-    //JSON.stringify()
-    let objectData = {
-        name: "전길동",
-        age: 50,
-        birth: "1999-10-10",
-    };
+  //JSON.stringify()
+  let objectData = {
+    name: "전길동",
+    age: 50,
+    birth: "1999-10-10",
+  };
 
-    console.log(objectData);
-    console.log(typeof objectData);
+  console.log(objectData);
+  console.log(typeof objectData);
 
-    let jsonData = JSON.stringify(objectData);
+  let jsonData = JSON.stringify(objectData);
 
-    console.log(jsonData);
-    console.log(typeof jsonData);
+  console.log(jsonData);
+  console.log(typeof jsonData);
 
-    //localStorage
-    //데이터 저장
-    let myObj = { name: "홍길동", age: 99, birth: "2000-02-02" };
-    let myJson = JSON.stringify(myObj);
-    localStorage.setItem("testJSON", myJson);
+  //localStorage
+  //데이터 저장
+  let myObj = { name: "홍길동", age: 99, birth: "2000-02-02" };
+  let myJson = JSON.stringify(myObj);
+  localStorage.setItem("testJSON", myJson);
 
-    //데이터 호출
-    let json = localStorage.getItem("testJSON");
-    let obj = JSON.parse(json);
-    console.log(obj);
+  //데이터 호출
+  let json = localStorage.getItem("testJSON");
+  let obj = JSON.parse(json);
+  console.log(obj);
 });

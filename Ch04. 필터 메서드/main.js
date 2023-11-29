@@ -13,30 +13,30 @@ add('선택자') : 선택된 문서객체와 매개변수의 선택자를 추가
 */
 
 $(document).ready(function () {
-    //선택자방식
-    //$("h1:first").css("color", "red");
+  //선택자방식
+  //$("h1:first").css("color", "red");
 
-    //first
-    $("h1").first().css("color", "red");
+  //first
+  $("h1").first().css("color", "red");
 
-    //last
-    $("h1").last().css("color", "red");
+  //last
+  $("h1").last().css("color", "red");
 
-    //even
-    $("h1").even().css("background", "pink");
+  //even
+  $("h1").even().css("background", "pink");
 
-    //odd
-    $("h1").odd().css("background", "lightblue");
+  //odd
+  $("h1").odd().css("background", "lightblue");
 
-    //eq
-    $("h1").eq(2).css("text-decoration", "underline");
+  //eq
+  $("h1").eq(2).css("text-decoration", "underline");
 
-    //filter
-    $("h1").filter(".second").css("font-weight", "normal");
+  //filter
+  $("h1").filter(".second").css("font-weight", "normal");
 
-    //not
-    $("h1").not(".second").css("font-style", "italic");
+  //not
+  $("h1").not(".second").css("font-style", "italic");
 
-    //add
-    $("h1").add("h5").css("font-size", 40);
+  //add
+  $("h1").add("h5").css("font-size", 40);
 });

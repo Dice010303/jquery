@@ -19,50 +19,50 @@ fadeToggle() : fadeIn()과 fadeOut() 메서드를 번갈아가며 실행하는 �
 */
 
 $(document).ready(function () {
-    //hide, show, slideUp, slideDown, fadeOut, fadeIn
-    //생략, slow, fast, 밀리초단위
-    $("button")
-        .eq(0)
-        .click(function () {
-            $("p").fadeOut(3000);
-        });
-    $("button")
-        .eq(1)
-        .click(function () {
-            $("p").fadeIn(3000);
-        });
-
-    //toggle, slideToggle, fadeToggle
-    $(".btn1").click(function () {
-        $(this).next().toggle("slow");
+  //hide, show, slideUp, slideDown, fadeOut, fadeIn
+  //생략, slow, fast, 밀리초단위
+  $("button")
+    .eq(0)
+    .click(function () {
+      $("p").fadeOut(3000);
     });
-    $(".btn2").click(function () {
-        $(this).next().slideToggle("slow");
-    });
-    $(".btn3").click(function () {
-        $(this).next().fadeToggle("slow");
+  $("button")
+    .eq(1)
+    .click(function () {
+      $("p").fadeIn(3000);
     });
 
-    //매개변수에 콜백함수 사용
-    $(".btn4").click(function () {
-        $(this)
-            .next()
-            .toggle("slow", function () {
-                $(this).css("background-color", "lightblue");
-            });
-    });
-    $(".btn5").click(function () {
-        $(this)
-            .next()
-            .slideToggle("slow", function () {
-                $(this).css("background-color", "lightblue");
-            });
-    });
-    $(".btn6").click(function () {
-        $(this)
-            .next()
-            .fadeToggle("slow", function () {
-                $(this).css("background-color", "lightblue");
-            });
-    });
+  //toggle, slideToggle, fadeToggle
+  $(".btn1").click(function () {
+    $(this).next().toggle("slow");
+  });
+  $(".btn2").click(function () {
+    $(this).next().slideToggle("slow");
+  });
+  $(".btn3").click(function () {
+    $(this).next().fadeToggle("slow");
+  });
+
+  //매개변수에 콜백함수 사용
+  $(".btn4").click(function () {
+    $(this)
+      .next()
+      .toggle("slow", function () {
+        $(this).css("background-color", "lightblue");
+      });
+  });
+  $(".btn5").click(function () {
+    $(this)
+      .next()
+      .slideToggle("slow", function () {
+        $(this).css("background-color", "lightblue");
+      });
+  });
+  $(".btn6").click(function () {
+    $(this)
+      .next()
+      .fadeToggle("slow", function () {
+        $(this).css("background-color", "lightblue");
+      });
+  });
 });
